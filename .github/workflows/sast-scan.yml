@@ -25,7 +25,7 @@ jobs:
           wget https://github.com/dependency-check/DependencyCheck/releases/download/v12.1.1/dependency-check-12.1.1-release.zip
           unzip dependency-check-12.1.1-release.zip
 
-      - name: Run scan with ODC1
+      - name: Run scan with ODC
         run: |
           dependency-check/bin/dependency-check.sh --project "bitcoin" --nvdApiKey ${{ secrets.WORKSHOP6_NVD_API_KEY }} --out . --scan .
 
